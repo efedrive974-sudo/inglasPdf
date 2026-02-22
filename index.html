@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDFCloud | Profesyonel PDF Depolama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <nav class="bg-white shadow-md py-4 px-8 flex justify-between items-center sticky top-0 z-50">
+        <div class="flex items-center space-x-2">
+            <i class="fas fa-file-pdf text-red-600 text-3xl"></i>
+            <span class="text-2xl font-bold tracking-tight">PDF<span class="text-red-600">Cloud</span></span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#" class="hover:text-red-600 transition">Özellikler</a>
+            <a href="#" class="hover:text-red-600 transition">Fiyatlandırma</a>
+            <a href="#" class="hover:text-red-600 transition">Yardım</a>
+        </div>
+        <div>
+            <button onclick="googleLogin()" class="bg-red-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-red-700 transition shadow-lg">
+                <i class="fab fa-google mr-2"></i> Giriş Yap
+            </button>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 py-20 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+            PDF Dosyalarınızı <span class="text-red-600">Güvenle</span> Saklayın ve Paylaşın
+        </h1>
+        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+            Hızlı, ücretsiz ve sınırsız PDF yükleme deneyimi. Belgelerinize her yerden ulaşın, saniyeler içinde paylaşılabilir linkler oluşturun.
+        </p>
+        
+        <div id="login-container" class="bg-white p-10 rounded-2xl shadow-2xl inline-block border border-gray-100 transform hover:scale-105 transition-transform">
+            <h2 class="text-2xl font-bold mb-6">Hemen Başlayın</h2>
+            <p class="mb-8 text-gray-500 text-sm italic italic">Kaydolmak için hesabınızı bağlamanız yeterlidir.</p>
+            <button onclick="googleLogin()" class="flex items-center justify-center w-full border-2 border-gray-200 py-3 px-6 rounded-xl hover:bg-gray-50 transition space-x-3">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="20" alt="Google">
+                <span class="font-bold text-gray-700">Google ile Devam Et</span>
+            </button>
+        </div>
+    </main>
+
+    <section class="bg-white py-20 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+            <div class="p-6">
+                <i class="fas fa-bolt text-yellow-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Işık Hızında</h3>
+                <p class="text-gray-500">PDF'leriniz saniyeler içinde yüklenir ve paylaşmaya hazır hale gelir.</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-shield-alt text-green-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Tam Güvenlik</h3>
+                <p class="text-gray-500">Dosyalarınız uçtan uca şifrelenir ve sadece sizin tarafınızdan erişilebilir.</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-link text-blue-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Kalıcı Linkler</h3>
+                <p class="text-gray-500">Paylaştığınız linklerin süresi asla dolmaz, PDF her zaman yayında kalır.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center border-b border-gray-800 pb-8">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold italic">PDFCloud</span>
+                <p class="text-gray-500 text-sm">© 2024 Tüm Hakları Saklıdır.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-red-500">Gizlilik</a>
+                <a href="#" class="hover:text-red-500">Kullanım Şartları</a>
+                <a href="#" class="hover:text-red-500">İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
